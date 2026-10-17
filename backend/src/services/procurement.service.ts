@@ -285,7 +285,7 @@ export class ProcurementService {
         if (existing) {
           updateData.push({ id: existing.id, recommendedQty, priority, confidenceScore, explanation });
         } else {
-          createData.push({ productId: product.id, vendorId: product.vendorId, recommendedQty, priority, confidenceScore, explanation });
+          createData.push({ productId: product.id, vendorId: product.defaultVendorId, recommendedQty, priority, confidenceScore, explanation });
         }
       } else {
         if (existing) supersedeIds.push(existing.id);
